@@ -1,11 +1,11 @@
 import React from 'react';
 import './App.css';
-import GoalForm from './components/GoalForm';
+import GoalList from './components/GoalList';
 
 function App() {
     return (
         <div className='goal-app'>
-            <GoalForm />
+            <GoalList />
         </div>
     );
 }
