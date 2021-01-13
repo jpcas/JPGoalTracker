@@ -1,11 +1,13 @@
-import './App.css';
+import React from 'react';
+import GoalForm from './components/GoalForm'
 
 function App() {
-  return (
-    <div className="goal-tracker">
-      <GoalForm />
-    </div>
-  );
+    return (
+        <div>
+            <h1>Test</h1>
+            <GoalForm />
+        </div>
+    )
 }
 
-export default App;
+export default App
