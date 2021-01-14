@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 import GoalForm from './GoalForm';
-import { RiCloseCircleLine } from 'react-icon/ri';
+import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
 
 
-const Goal = ({ goal, completeGoal, removeGoal, updateGoal}) => {
+const Goal = ({ goals, completeGoal, removeGoal, updateGoal}) => {
     const [edit, setEdit] = useState({
         id: null,
         value:''
@@ -20,8 +20,8 @@ if (edit.id) {
     return <GoalForm edit={edit} onSubmit={submitUpdate} />
 }
 
-    return goal.map((goal, index) => (
-        <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index}
+    return goals.map((goal, index) => (
+        <div className={goal.isComplete ? 'todo-row complete' : 'todo-row'} key={index}
         >
         <div key={goal.id} onClick={() => completeGoal(goal.id)}>
                 {goal.text}
