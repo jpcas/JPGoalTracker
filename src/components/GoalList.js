@@ -9,16 +9,15 @@ function GoalList() {
             return
         }
 
-        const newGoals = [goals, ...goals]
+        const newGoals = [goals, ...goals];
 
 
         setGoals(newGoals);
-        console.log(...goals);
     };
     return (
         <>
            <h1>What Goals are we crushing?</h1> 
-           <GoalForm />
+           <GoalForm onSubmit={addGoal} />
         </>
     )
 }

@@ -13,7 +13,7 @@ const handleSubmit = e => {
         text: input
         });
         setInput('');
-}
+};
 
 useEffect(() => {
     inputRef.current.focus();
