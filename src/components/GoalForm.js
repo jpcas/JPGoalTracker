@@ -1,9 +1,9 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 
 function GoalForm(props) {
 
-const [input, setInput] = useState(props.edit ? props.edit.value : '');
+const [input, setInput] = useState('');
 
 const inputRef = useRef(null);
 
@@ -26,18 +26,19 @@ const handleSubmit = e => {
 };
 
     return (
-            <form onSubmit={handleSubmit} className='goal-form'>
+            <form className='goal-form' onSubmit={handleSubmit} >
                 {props.edit ? ( 
                 <>
                 <input 
+                    type='text'
                     placeholder="update your goal"
                     value={input}
-                    onChange={handleChange}
                     name='text'
                     ref={inputRef}
                     className='goal-input edit'
+                    onChange={handleChange}
                 />
-                <button onClick={handleSubmit} className='todo-button edit'>Update a Goal</button>
+                <button className='goal-button edit' onClick={handleSubmit} >Update a Goal</button>
                 </>
                 ):(
                 <>
@@ -46,7 +47,7 @@ const handleSubmit = e => {
                         value={input}
                         onChange={handleChange}
                         name='text'
-                        className='todo-input'
+                        className='goal-input'
                         ref={inputRef}
                     />
                     <button onClick={handleSubmit} className='goal-button'>

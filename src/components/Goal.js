@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 import GoalForm from './GoalForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
@@ -17,11 +17,13 @@ const Goal = ({ goals, completeGoal, removeGoal, updateGoal}) => {
         });
     };
 if (edit.id) {
-    return <GoalForm edit={edit} onSubmit={submitUpdate} />
+    return <GoalForm edit={edit} onSubmit={submitUpdate} />;
 }
 
     return goals.map((goal, index) => (
-        <div className={goal.isComplete ? 'todo-row complete' : 'todo-row'} key={index}
+        <div 
+        className={goal.isComplete ? 'goal-row complete' : 'goal-row'} 
+        key={index}
         >
         <div key={goal.id} onClick={() => completeGoal(goal.id)}>
                 {goal.text}
@@ -40,4 +42,4 @@ if (edit.id) {
     ));
 };
 
-export default Goal
+export default Goal;
