@@ -39,7 +39,7 @@ if (edit.id) {
           className='edit-icon'
         />
         <>
-        {moment().format("MMM Do YY") }            
+        {moment().format('MMMM Do YYYY, h:mma') }            
         </>
         </div>
         </div>
