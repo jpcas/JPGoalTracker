@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GoalForm from './GoalForm';
 import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiEdit } from 'react-icons/ti';
+import moment from 'moment';
 
 
 const Goal = ({ goals, completeGoal, removeGoal, updateGoal}) => {
@@ -37,6 +38,9 @@ if (edit.id) {
           onClick={() => setEdit({ id: goal.id, value: goal.text })}
           className='edit-icon'
         />
+        <>
+        {moment().format("MMM Do YY") }            
+        </>
         </div>
         </div>
     ));

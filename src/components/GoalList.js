@@ -28,10 +28,10 @@ function GoalList() {
     }
 
     const updateGoal = (goalId, newValue) => {
-        if(!goal.text || /^\s*$/.text(goal.text)) {
+        if(!Goal.text || /^\s*$/.text(Goal.text)) {
             return;
         }
-        setGoals(prev => prev.map(item.id === goalId))
+        setGoals(prev => prev.map(Goal.id === goalId))
     }
     return (
         <>
